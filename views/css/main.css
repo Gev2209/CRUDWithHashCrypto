@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    /* color: white; */
+}
+a:hover {
+    text-decoration: underline;
+}
+.main_welcome {
+    height: 99.7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: sans-serif;
+    background: linear-gradient(135deg, #22d3ee, #3b82f6, #1e40af);
+    text-align: center;
+}
+
+.welcome {
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+.welcome_card {
+    background: linear-gradient(135deg, #fde68a, #fca5a5, #a7f3d0);
+    width: 400px;
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+}
+
+.registr {
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: rgb(255, 255, 255);
+}
