@@ -2,7 +2,10 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
+const usersRouter = require('./routes/error');
+const { loginRouter } = require('./routes/authLogin');
+const { registerRouter } = require('./routes/registerAuth');
+const { loggedRouter } = require('./routes/logged');
 
 
 app.set('views', path.join(__dirname, 'views'));
@@ -18,7 +21,11 @@ app.use('/', indexRouter);
 
 app.use('/users', usersRouter);
 
+app.use('/auth',loginRouter);
 
+app.use('/auth',registerRouter);
+
+app.use('/',loggedRouter);
 
 
 
