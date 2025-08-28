@@ -3,7 +3,9 @@ const { readDB } = require('../middleware/readData');
 const path = require('path');
 const fs = require('fs').promises;
 const registerRouter = express.Router();
-const bycipt = require('bcryptjs')
+const bycipt = require('bcryptjs');
+const { checkEmail } = require('../middleware/checkEmail');
+const { checkPass } = require('../middleware/checkPassword');
 
 /* GET users listing. */
 registerRouter.get('/register', (req, res) => {
@@ -11,7 +13,7 @@ registerRouter.get('/register', (req, res) => {
 });
 
 
-registerRouter.post('/register', readDB, async (req, res) => {
+registerRouter.post('/register', [readDB, checkEmail], async (req, res) => {
     const {users} = res.locals
     const body = req.body
     const hashPass = await bycipt.hash(body.password, 10);
@@ -19,8 +21,7 @@ registerRouter.post('/register', readDB, async (req, res) => {
         id: crypto.randomUUID(),
         name : body.name,
         email : body.email,
-        password : body.password !== '' ? hashPass : '',
-        repeat_password : body.password !== '' ? hashPass : '',
+        password : body.password !== '' ? `${hashPass}` : '',
         date : body.date,
         gener : body.gender
     }
@@ -28,6 +29,6 @@ registerRouter.post('/register', readDB, async (req, res) => {
 
     await fs.unlink(path.join(__dirname,'..', 'db', 'users.json'))
     await fs.appendFile(path.join(__dirname,'..', 'db', 'users.json'), JSON.stringify(users))
-    res.redirect('http://localhost:3000/auth/login')
+    res.redirect('http://localhost:3001/auth/login')
 })
 module.exports.registerRouter = registerRouter;

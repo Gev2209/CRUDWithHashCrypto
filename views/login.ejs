@@ -2,18 +2,20 @@
 <html lang="en">
 <%-include('./helpersEJS/head.ejs', title)%>
 <body>
-    <header><a href="http://localhost:3000/">HOME</a></header>
+    <header><a href="http://localhost:3001/">HOME</a></header>
     <main class="form">
         <div class="form_card">
             <h2 class="h2_icon"><i class="fa-solid fa-circle-user"></i></h2>
             <h2 class="h2_login">LOG IN </h2>
-            <form action="http://localhost:3000/logged">
+            <form action="http://localhost:3001/logged" method="post">
                 <input type="email" placeholder="Write your email" name="email">
                 <input type="password" placeholder="Write your password" name="password">
                 <button class="regist_btn">LOG IN</button>
+                    <% if (typeof error !== 'undefined') { %>
+                      <p class="error-message"><%= error %>!</p>
+                    <% } %>
             </form>
         </div>
-    </main>
     </main>
 </body>
 </html>
