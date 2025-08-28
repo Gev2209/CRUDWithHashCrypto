@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<%-include('./helpersEJS/head.ejs', title) %>
+  <body>
+    <main class="users_table">
+      
+       <ul id="taskList">
+          <% users.forEach((e)=> { %>
+            <table border="1">
+        <tr>
+            <th>Users</th>
+        </tr>
+        <tr>
+            <td>id-<%= e.id %></td>
+        </tr>
+        <tr>
+            <td>name-<%= e.name %></td>
+        </tr>
+        <tr>
+            <td>email-<%= e.email %></td>
+        </tr>
+        <tr>
+            <td>password-<%= e.password %></td>
+        </tr>
+        <tr>
+            <td>gender-<%= e.gender %></td>
+        </tr>
+        <tr>
+            <td>date-<%= e.date %></td>
+        </tr>
+      </table>  
+            <% }) %>
+
+    </main>
+  </body>
+
+</html>

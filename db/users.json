@@ -1,10 +1,1 @@
-[
-    {
-        "id": "9cf9d682-95af-4cd2-9c4a-990f45c0da2e",
-        "name": "Gevorg",
-        "email": "gevorg.mirzoyan.23@gmail.com",
-        "password": "$2b$10$Pfzkoz5lJ3n85pgbs.V2ZuS.crf.515s4yTiopWaOcwsaWeAOcige",
-        "date": "2025-08-07",
-        "gender": "male"
-    }
-]
+[{"id":"9cf9d682-95af-4cd2-9c4a-990f45c0da2e","name":"Gevorg","email":"gevorg.mirzoyan.23@gmail.com","password":"$2b$10$Pfzkoz5lJ3n85pgbs.V2ZuS.crf.515s4yTiopWaOcwsaWeAOcige","date":"2025-08-07","gender":"male"},{"id":"f53714da-3b3b-43fe-a069-aa45727f4599","name":"aram","email":"aram@gmai.com","password":"$2b$10$9vfzZIIikyarsNHnwLRswOVl.aQMw6XcUA.lqllao6NArro2.VEcW","date":"2025-08-21","gender":"male"}]
