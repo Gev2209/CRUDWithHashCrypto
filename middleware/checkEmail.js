@@ -3,7 +3,8 @@ const checkEmail =  (req, res, next) => {
     const { email } = req.body
     const emailExists = users.find(u => u.email === email)
     if(emailExists) {
-        return res.status(400).json({error: "Email has already registered"})
+        // return res.status(400).json({error: "Email has already registered"})
+        return res.render('register', { title: 'Register', error: 'Email has already registered' })
     }
     next()
 }

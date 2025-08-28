@@ -3,6 +3,7 @@ const loggedRouter = express.Router();
 const path = require('path');
 const { checkLogin } = require('../middleware/checkLogin');
 const { readDB } = require('../middleware/readData');
+const { checkPass } = require('../middleware/checkPassword');
 
 loggedRouter.post('/logged', [readDB,checkLogin],(req, res) => {
     res.render('logged', {title: 'Express'});

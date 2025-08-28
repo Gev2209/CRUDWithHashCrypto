@@ -13,7 +13,7 @@ registerRouter.get('/register', (req, res) => {
 });
 
 
-registerRouter.post('/register', [readDB, checkEmail], async (req, res) => {
+registerRouter.post('/register', [readDB, checkEmail,checkPass], async (req, res) => {
     const {users} = res.locals
     const body = req.body
     const hashPass = await bycipt.hash(body.password, 10);

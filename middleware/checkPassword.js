@@ -7,7 +7,8 @@ const checkPass = async (req, res, next) => {
         res.locals.users = JSON.parse(users);
         const {password} = req.body;
         if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{5,}$/.test(password)) {
-            res.status(404).json({message: 'Password must be at least 5 characters long, contain at least one uppercase letter, one lowercase letter, and one number'});
+            // res.status(404).json({message: 'Password must be at least 5 characters long, contain at least one uppercase letter, one lowercase letter, and one number'});
+            return res.render('register', { title: 'Register', error: 'Password must be at least 5 characters long, contain at least one uppercase letter, one lowercase letter, and one number' })
         } else {
             return next();
         }

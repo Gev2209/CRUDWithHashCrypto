@@ -1,9 +1,1 @@
-[
-    {
-        "id": "e5c71573-4c4d-45f0-99b1-d1248e11ca47",
-        "email": "gevorg@gmail.com",
-        "password": "$2b$10$98ihnF9XfD/ra19TFKZWG.abMeoFa9ObGN.IU7Tld1PO.V.xHtPIW",
-        "date": "2025-08-13",
-        "gener": "male"
-    }
-]
+[{"id":"e5c71573-4c4d-45f0-99b1-d1248e11ca47","email":"gevorg@gmail.com","password":"$2b$10$98ihnF9XfD/ra19TFKZWG.abMeoFa9ObGN.IU7Tld1PO.V.xHtPIW","date":"2025-08-13","gener":"male"},{"id":"716a7a47-2e52-4306-8f4e-9fd90e7a2dd1","email":"vahancho@gmail.com","password":"$2b$10$YLsl34tfm1.prAVSOTaBNeWdDJ/Uh4rRJYZA.b7KtY0o8m2677g1a","date":"","gener":""},{"id":"f10148ec-e260-4f0d-a7a7-8629920c7594","email":"asda@gmail.com","password":"$2b$10$s7UKVw0DaEQY1Ln2SArKTeIkOI1Nhy3VJkcV.fG7MtO0howhl9Gmq","date":"","gener":""},{"id":"bea792d6-9464-4a7e-bf20-8bde14998fde","email":"ssffs@gmail.com","password":"$2b$10$OIItKlqX0tdUVe5MQZsRouiWlUwa3LmJQMpp/llbDmLGIOUvLkeq2","date":"","gener":""},{"id":"ecce8188-9af3-40ad-85fb-0ab0750f8518","email":"asdada@gmail.com","password":"$2b$10$q./BFYu6/2RvsCN.OxjSh.DwuKonSBy/vuM3KfVv7wwzGkP7o79CW","date":"","gener":""},{"id":"6b71b723-2336-4e91-8702-915f464c8d36","email":"assda@gmail.com","password":"$2b$10$nXLi42lQ8Rc6P9.ycGTO.elYwDY.76gQy1Ab2mXQll19BX4kvtoRa","date":"","gener":""},{"id":"002ac696-972e-4c36-aff5-b0a46dbadb77","email":"sdasdad@gmail.com","password":"$2b$10$vja0UmmcOepHF5qRtygs6eY7OtjF0e3ZRT.sBYzgoMKEhZ8MCIvWa","date":"","gener":""}]
