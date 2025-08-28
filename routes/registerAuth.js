@@ -23,7 +23,7 @@ registerRouter.post('/register', [readDB, checkEmail,checkPass], async (req, res
         email : body.email,
         password : body.password !== '' ? `${hashPass}` : '',
         date : body.date,
-        gener : body.gender
+        gender : body.gender
     }
     users.push(user);
 
