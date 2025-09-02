@@ -6,6 +6,8 @@ const bycipt = require('bcryptjs');
 const { checkEmail } = require('../middleware/checkEmail');
 const { checkPass } = require('../middleware/checkPassword');
 const { readDB } = require('../middleware/readData');
+const { schema } = require('../schema/register')
+
 
 /* GET users listing. */
 registerRouter.get('/register', (req, res) => {
@@ -16,6 +18,7 @@ registerRouter.get('/register', (req, res) => {
 registerRouter.post('/register', [readDB, checkEmail,checkPass], async (req, res) => {
     const {users} = res.locals
     const body = req.body
+    // const validator = await schema.validateAsync(req.body)
     const hashPass = await bycipt.hash(body.password, 10);
     const user = {
         id: crypto.randomUUID(),

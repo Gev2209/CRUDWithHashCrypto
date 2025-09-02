@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const { indexRouter, usersRouter, registerRouter, loginRouter, loggedRouter, usersTableRouter } = require('./routes/requireRoutes');
+const { editRout, deleteRout } = require('./routes/edit');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(express.json());
@@ -19,7 +20,11 @@ app.use('/auth',registerRouter);
 
 app.use('/',loggedRouter);
 
-app.use('/', usersTableRouter)
+app.use('/', usersTableRouter);
+
+app.use('/users', editRout);
+
+app.use('/users', deleteRout);
 
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
