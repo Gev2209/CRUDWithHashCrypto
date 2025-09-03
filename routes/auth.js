@@ -10,33 +10,15 @@ const { checkPass } = require('../middleware/checkPassword');
 const { readDB } = require('../middleware/readData');
 const { schema } = require('../schema/register');
 const { checkLogin } = require('../middleware/checkLogin');
+const AuthController = require('../controllers/authControllers');
 
 
 /* GET users listing. */
-registerRouter.get('/register', (req, res) => {
-    res.render('register', { title: 'Express' })
-});
 
+const authController = new AuthController();
+registerRouter.get('/register', authController.getregister);
 
-registerRouter.post('/register', [readDB, checkEmail, checkPass], async (req, res) => {
-    const { users } = res.locals
-    const body = req.body
-    // const validator = await schema.validateAsync(req.body)
-    const hashPass = await bycipt.hash(body.password, 10);
-    const user = {
-        id: crypto.randomUUID(),
-        name: body.name,
-        email: body.email,
-        password: body.password !== '' ? `${hashPass}` : '',
-        date: body.date,
-        gender: body.gender
-    }
-    users.push(user);
-
-    await fs.unlink(path.join(__dirname, '..', 'db', 'users.json'))
-    await fs.appendFile(path.join(__dirname, '..', 'db', 'users.json'), JSON.stringify(users))
-    res.redirect('http://localhost:3001/auth/login')
-})
+registerRouter.post('/register', [readDB, checkEmail, checkPass], authController.postRegister)
 
 
 registerRouter.put('/change/:id', readDB, async (req, res) => {
@@ -58,18 +40,15 @@ registerRouter.delete('/delete/:id', readDB, async (req, res) => {
 })
 
 
-loginRouter.get('/login', (req, res) => {
-    res.render('login', { title: 'Express' })
-})
+loginRouter.get('/login', authController.getLogin)
 
 
 loggedRouter.post('/logged', [readDB, checkLogin], (req, res) => {
     res.render('logged', { title: 'Express' });
 })
 
-loggedRouter.get('/logged', (req, res) => {
-    res.render('logged', { title: 'Express' });
-})
+
+loggedRouter.get('/logged', authController.getLogged)
 
 module.exports = {
     registerRouter,
