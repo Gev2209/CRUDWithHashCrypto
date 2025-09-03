@@ -3,10 +3,16 @@
 <%-include('./helpersEJS/head.ejs', title) %>
   <body>
     <main>
-        <p>USERS</p>
+        <p>USERS -  
+            <% if (!users || users.length === 0) {%>
+                    <%= count = 0%>
+                 <h1 class="home_count"><a href="http://localhost:3001">Home</a></h1>
+            <%} else {%>
+                <%= users.length%>
+            <%}%> 
+        </p>
       <section class="users_table">
           <% users.forEach((e)=> { %>
-            <!-- <table border="1"> -->
                 <div class="table-item">
                     <div>Users - <%=count++%></div>
                     <div><span class="name_table">name -</span><%= e.name %></div>

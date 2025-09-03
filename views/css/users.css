@@ -89,3 +89,11 @@ p {
     text-align: center;
     font-size: 20px;
 }
+
+.home_count{
+    text-align: center;
+}
+
+#user_name {
+    border: none;
+}

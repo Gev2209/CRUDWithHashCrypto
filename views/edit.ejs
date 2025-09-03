@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <%-include('./helpersEJS/head.ejs', title) %>
-<body>
-    <h1><a href="http://localhost:3001/users">Home</a></h1>
-    <form  action="http://localhost:3001/users/edit/<%= users.id %>" method="post">
-    <input type="text" name="name" value="<%= users.name %>">
-    <input type="email" name="email" value="<%= users.email %>">
-    <input type="text" name="gender" value="<%= users.gender %>">
-    <input type="date" name="date" value="<%= users.date %>">
-    <button type="submit">Save</button>
 
+    <body>
+        <main class="edit_page">
+            <h1><a href="http://localhost:3001/users">Home</a></h1>
+            <form action="http://localhost:3001/users/edit/<%= users.id %>" method="post">
+                <input type="text" name="name" value="<%= users.name %>" id="user_name">
+                <input type="email" name="email" value="<%= users.email %>" id="user_name">
+                <input type="text" name="gender" value="<%= users.gender %>" id="user_name">
+                <input type="date" name="date" value="<%= users.date %>" id="user_name">
+                <button type="submit">Save</button>
+        </main>
+    </body>
 
-    
-</body>
 </html>

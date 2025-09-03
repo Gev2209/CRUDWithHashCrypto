@@ -1,26 +1,17 @@
 [
-    {
-        "id": "8098047c-71a2-4d46-a9bc-9a0cc1e340dd",
-        "name": "Gevorg",
-        "email": "gevorg.mirzoyan.23@gmail.com",
-        "password": "$2b$10$IGprQexCS8iAXCkUXcepZODLxs8ujxfljupnNeyy5XcwBZKolGrAi",
-        "date": "2025-09-26",
-        "gender": "male"
-    },
-    {
-        "id": "8098047c-71a2-4d46-a9bc-9a0cc1e340dd",
-        "name": "Gevorg",
-        "email": "gevorg.mirzoyan.23@gmail.com",
-        "password": "$2b$10$IGprQexCS8iAXCkUXcepZODLxs8ujxfljupnNeyy5XcwBZKolGrAi",
-        "date": "2025-09-26",
-        "gender": "male"
-    },
-    {
-        "id": "8098047c-71a2-4d46-a9bc-9a0cc1e340ddsdadsds",
-        "name": "Gevorg",
-        "email": "gevorg.mirzoyan.23@gmail.com",
-        "password": "$2b$10$IGprQexCS8iAXCkUXcepZODLxs8ujxfljupnNeyy5XcwBZKolGrAi",
-        "date": "2025-09-26",
-        "gender": "male"
-    }
+  {
+    "id": "f70766b2-f2dd-465a-a3ea-002ab9e07149",
+    "name": "Gvenoooo",
+    "email": "gevorg.mirzoyan.23@gmail.com",
+    "password": "$2b$10$UHVi2tTUZPqpxToGuFGjZ.uki93MnSm5exbGUMqQ7hgWqM6aVsUB6",
+    "date": "2025-10-02",
+    "gender": "male"
+  },{
+    "id": "f70766b2-f2dd-465a-a3ea-002ab9e07149",
+    "name": "Gvenoooo",
+    "email": "gevorg.mirzoyan.23@gmail.com",
+    "password": "$2b$10$UHVi2tTUZPqpxToGuFGjZ.uki93MnSm5exbGUMqQ7hgWqM6aVsUB6",
+    "date": "2025-10-02",
+    "gender": "male"
+  }
 ]

@@ -58,8 +58,6 @@ registerRouter.delete('/delete/:id', readDB, async (req, res) => {
 })
 
 
-
-
 loginRouter.get('/login', (req, res) => {
     res.render('login', { title: 'Express' })
 })
