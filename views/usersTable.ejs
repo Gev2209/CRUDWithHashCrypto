@@ -2,33 +2,31 @@
 <html>
 <%-include('./helpersEJS/head.ejs', title) %>
   <body>
-    <main class="users_table">
-      <section>
+    <main>
+        <p>USERS</p>
+      <section class="users_table">
           <% users.forEach((e)=> { %>
-            <table border="1">
-        <tr>
-            <th>Users - <%=e.id%></th>
-        </tr>
-        <tr>
-            <td><span class="name_table">name -</span><%= e.name %></td>
-        </tr>
-        <tr>
-            <td><span class="name_table">email -</span><%= e.email %></td>
-        </tr>
-        <tr>
-            <td><span class="name_table">gender -</span><%= e.gender %></td>
-        </tr>
-        <tr>
-            <td><span class="name_table">date -</span><%= e.date %></td>
-        </tr>
-        <tr>
-            <!-- <td><button class="edit_btn btn_options">Edit</button><button class="delete_btn btn_options">Delete</button></td> -->
-            <td>
-              <a href="http://localhost:3001/users/edit/<%= e.id%>" class="edit_btn btn_options">Edit</a> <form action="http://localhost:3001/users/delete/<%= e.id%>" method="post">
-                <button class="delete_btn btn_options">Delete</button>
-              </form></td>
-        </tr>
-      </table>  
+            <!-- <table border="1"> -->
+                <div class="table-item">
+                    <div>Users - <%=count++%></div>
+                    <div><span class="name_table">name -</span><%= e.name %></div>
+                    <div><span class="name_table">email -</span><%= e.email %></div>
+                    <div><span class="name_table">gender -</span><%= e.gender %></div>
+                    <div><span class="name_table">date -</span><%= e.date %></div>
+                    <div class="button-box">
+                        <a href="http://localhost:3001/users/edit/<%= e.id%>" class="edit_btn btn_options">Edit</a> 
+                        <form action="http://localhost:3001/users/delete/<%= e.id%>" method="post">
+                            <button class="delete_btn btn_options">Delete</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- <tr>
+                     <td><button class="edit_btn btn_options">Edit</button><button class="delete_btn btn_options">Delete</button></td>
+                    <td>
+                    
+                    </td>
+                </tr>
+            </table>   -->
             <% }) %>
     </section>
 

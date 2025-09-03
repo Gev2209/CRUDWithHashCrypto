@@ -7,7 +7,7 @@ const { readDB } = require('../middleware/readData');
 
 usersTableRouter.get('/users', readDB ,async (req, res) => {
     const {users} = res.locals
-    res.render(path.join(__dirname, '..', 'views', 'usersTable.ejs'), {title : "Helloo", users});
+    res.render(path.join(__dirname, '..', 'views', 'usersTable.ejs'), {title : "Helloo", users, count : 1});
 })
 
 module.exports.usersTableRouter = usersTableRouter

@@ -1,8 +1,6 @@
 const indexRouter = require('./index');
 const usersRouter = require('./error');
-const { loginRouter } = require('./authLogin');
-const { registerRouter } = require('./registerAuth');
-const { loggedRouter } = require('./logged');
+const { registerRouter, loginRouter, loggedRouter } = require('./auth');
 const { usersTableRouter } = require('./users');
 
 module.exports = {
