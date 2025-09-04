@@ -1,13 +1,10 @@
 const express = require('express');
 const usersTableRouter = express.Router()
-const fs = require('fs').promises
-const path = require('path');
 const { readDB } = require('../middleware/readData');
+const AuthController = require('../controllers/authControllers');
 
+const authController = new AuthController();
 
-usersTableRouter.get('/users', readDB ,async (req, res) => {
-    const {users} = res.locals
-    res.render(path.join(__dirname, '..', 'views', 'usersTable.ejs'), {title : "Helloo", users, count : 1});
-})
+usersTableRouter.get('/users', readDB ,authController.getUsers)
 
 module.exports.usersTableRouter = usersTableRouter

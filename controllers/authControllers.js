@@ -1,6 +1,3 @@
-const path = require('path');
-const fs = require('fs').promises;
-
 class  AuthController {
      async getregister (req, res) {
         res.render('register', { title: 'Express' })
@@ -14,6 +11,14 @@ class  AuthController {
         res.render('logged', { title: 'Express' });
      }
 
+     async postLogged (req, res) {
+        res.render('logged', { title: 'Express' });
+     }
+
+    async getUsers (req, res) {
+        const {users} = res.locals
+        res.render('usersTable', {title : "Helloo", users, count : 1});
+    }
 
      async postRegister (req, res) {
         try {
