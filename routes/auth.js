@@ -21,23 +21,13 @@ registerRouter.get('/register', authController.getregister);
 registerRouter.post('/register', [readDB, checkEmail, checkPass], authController.postRegister)
 
 
-registerRouter.put('/change/:id', readDB, async (req, res) => {
-    let { users } = res.locals
-    let item = users.find(i => i.id == req.params.id)
-    Object.assign(item, req.body)
-    await fs.unlink(path.join(__dirname, '..', 'db', 'users.json'))
-    await fs.appendFile(path.join(__dirname, '..', 'db', 'users.json'), JSON.stringify(users, null, 2))
-    res.json(users)
-})
-
-
-registerRouter.delete('/delete/:id', readDB, async (req, res) => {
-    let { users } = res.locals
-    users = users.filter(item => item.id != req.params.id)
-    await fs.unlink(path.join(__dirname, '..', 'db', 'users.json'))
-    await fs.appendFile(path.join(__dirname, '..', 'db', 'users.json'), JSON.stringify(users, null, 2))
-    res.json(users)
-})
+// registerRouter.delete('/delete/:id', readDB, async (req, res) => {
+//     let { users } = res.locals
+//     users = users.filter(item => item.id != req.params.id)
+//     await fs.unlink(path.join(__dirname, '..', 'db', 'users.json'))
+//     await fs.appendFile(path.join(__dirname, '..', 'db', 'users.json'), JSON.stringify(users, null, 2))
+//     res.json(users)
+// })
 
 
 loginRouter.get('/login', authController.getLogin)
