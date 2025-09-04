@@ -2,9 +2,14 @@ const path = require('path');
 
 class ChangeControllers {
     async getEditUsers (req, res) {
-        const {users} = res.locals
-        const user = users.find((e) => e.id === req.params.id)
-        res.render(path.join(__dirname, '..', 'views', 'edit.ejs'), {title : "Hello Gevorg", users : user});
+        try {
+            const {users} = res.locals
+            const user = users.find((e) => e.id === req.params.id)
+            res.render(path.join(__dirname, '..', 'views', 'edit.ejs'), {title : "Hello Gevorg", users : user});    
+        } catch (error) {
+            res.status(500).send(error.message);
+        }
+        
     }
 
     async postEditUsers (req, res) {
