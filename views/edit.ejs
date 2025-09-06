@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<%-include('./helpersEJS/head.ejs', title) %>
-
-    <body>
+<!-- <%-include('./helpersEJS/head.ejs', title) %> -->  
+<body>
         <main class="edit_page">
-            <h1><a href="http://localhost:3001/users">Home</a></h1>
+            <h1 class="edittt"><a href="http://localhost:3001/users">USERS</a></h1>
             <form action="http://localhost:3001/users/edit/<%= users.id %>" method="post">
                 <input type="text" name="name" value="<%= users.name %>" id="user_name">
                 <input type="email" name="email" value="<%= users.email %>" id="user_name">
@@ -13,5 +12,4 @@
                 <button type="submit">Save</button>
         </main>
     </body>
-
 </html>
