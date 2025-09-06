@@ -25,7 +25,7 @@ class  AuthController {
             let { users } = res.locals;
             const body = req.body;
             users = req.app.locals.services.auth.postRegister(users, body);
-            res.redirect('http://localhost:3001/auth/login');
+            res.redirect('http://localhost:3001');
         } catch (error) {
             res.status(500).send(error.message);
         }
